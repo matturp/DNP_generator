@@ -1,6 +1,3 @@
-let hiArray;
-let pg;
-let roboto;
 let slider;
 
 function setup() {
