@@ -4,7 +4,7 @@ let roboto;
 let slider;
 
 function setup() {
-  createCanvas(4914, 3231);
+  createCanvas(3274, 2514);
   pg = createGraphics(width,height);
   roboto = loadFont('assets/RobotoMono-Bold.ttf');
   //textFont(roboto);
