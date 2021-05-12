@@ -10,8 +10,8 @@ function setup() {
   //textFont(roboto);
 
   slider = createSlider(0, 90, 5, 1);
-  slider.position(10, 1100);
-  slider.style('width', '80px');
+  slider.position(3300, 100);
+  slider.style('width', '200px');
 }
 
 function draw() {
