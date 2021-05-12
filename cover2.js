@@ -4,8 +4,8 @@ function setup() {
   createCanvas(3274, 2514);
 
   slider = createSlider(0, 90, 20, 1);
-  slider.position(10, 0);
-  slider.style('width', '80px');
+  slider.position(3300, 100);
+  slider.style('width', '200px');
 }
 
 function draw() {
