@@ -18,7 +18,7 @@ function draw() {
       let val = slider.value();
 
       fill(0);
-      textSize(20);
+      textSize(40);
       translate(mouseX,mouseY);
       rotate(val);
 
