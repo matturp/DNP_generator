@@ -1,17 +1,16 @@
-let hiArray;
-let pg;
-let roboto;
 let slider;
+let slider2;
 
 function setup() {
   createCanvas(3274, 2514);
-  pg = createGraphics(width,height);
-  roboto = loadFont('assets/RobotoMono-Bold.ttf');
-  //textFont(roboto);
 
   slider = createSlider(0, 90, 5, 1);
   slider.position(100, height+50);
   slider.style('width', '200px');
+  
+  slider2 = createSlider(0, 50, 25, 5);
+  slider2.position(300, height+50);
+  slider2.style('width', '200px');
 }
 
 function draw() {
@@ -22,9 +21,10 @@ function draw() {
     for (var b = 0; b < height-100; b = b  + 20){
 
       let val = slider.value();
+      let txtsize = slider2.value();
 
       fill(0);
-      textSize(40);
+      textSize(txtsize);
       translate(mouseX,mouseY);
       rotate(val);
       //text('Networks•Positions•Designers•',a,b);
@@ -35,68 +35,6 @@ function draw() {
       text('Positions',240+a,50+b);
     }
   }
-
-/*   pg.push();
-  pg.textAlign(LEFT);
-  pg.textSize(100);
-  pg.fill(0);
-  pg.text('DIVERSITY', 200, 200);
-  pg.text('ARCHIVES', 200, 500);
-  pg.text('SEGREGATION', 200, 800);
-  pg.pop();
-
-  var tilesx = map(mouseX,0,width,0,5);
-  var tilesy = map(mouseY,0,height,0,5);
-  var tileW = width/tilesx;
-  var tileH = height/tilesy;
-
-
- for (var y = 0; y < tilesy; y++){
-  for (var x = 0; x < tilesx; x++) {
-
- var wave1 = sin(frameCount * 0.01 * (x+y)) * (mouseX*0.1);
- var wave2 = cos(frameCount * 0.01 * (x+y)) * (mouseY*0.1);
- var wave3 = tan(frameCount * 0.01 * (x+y)) * (mouseY*0.1);
-  
-  // SOURCE
-    var sx = x*tileW+wave2;
-    var sy = y*tileH+wave1;
-    var sw = tileW;
-    var sh = tileH;
-
-
-    // DESTINATION
-
-    var dx = 50+(x*tileW);
-    var dy = 50+(y*tileH);
-    var dw = tileW + wave3;
-    var dh = tileH;
-
-    copy(pg, sx, sy, sw, sh, dx, dy, dw, dh);
-  }
-  } */
-
-/* let fidelity = 0.1;
-let xPosition = 50;
-let yPosition = 500;
-let defineSize = 90;
-let circleRadius = 5;
-let lineLength = 10;
-
-hiArray = roboto.textToPoints('DIVERSITY/ARCHIVE/SEGREGATION',xPosition,yPosition,defineSize, {
-
-  sampleFactor: fidelity
-
-});
-
-for (let i = 0; i < hiArray.length; i++){
-  noStroke();
-  fill(0);
-  ellipse(hiArray[i].x*wave, hiArray[i].y,circleRadius,circleRadius);
-
-  //translate(hiArray[i].x, hiArray[i].y);
-    //line(i, i, hiArray[i].x,hiArray[i].y);
-} */
 
 } 
 
