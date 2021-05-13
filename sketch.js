@@ -15,7 +15,6 @@ function setup() {
 
 function draw() {
   background(255);
-  var wave = sin(radians(frameCount)) * 100;
 
   for (var a = 0; a < width-100; a = a + 275){
     for (var b = 0; b < height-100; b = b  + 20){
